@@ -21,7 +21,6 @@ jobs:
 
       - run: sh ./stretch3/add_ga_tracking_code.sh
       - run: NODE_OPTIONS=--openssl-legacy-provider npm run build
-      - run: sh ./stretch3/modify_index_html.sh
       - uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
